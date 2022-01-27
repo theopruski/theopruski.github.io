@@ -1,76 +1,137 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');*
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #6f6f6f;
+}
+nav h1{
+    color: #717171;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+nav .onglets{
+    margin-top: 3px;
+    margin-left: 300px;
+}
+nav .onglets a{
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
 
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins';
-}
-body
-{
+header{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    background-color: #222;
-}
-.container
-{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container .cigarette
-{
-    transform-style: preserve-3d;
-    animation: animate 15s linear infinite;
-}
-@keyframes animate
-{
-    0%
-    {
-        transform: perspective(1000px) rotateX(0deg);
-    }
-    100%
-    {
-        transform: perspective(1000px) rotateX(360deg);
-    }
-}
-.container .cigarette span
-{
-    position: absolute;
+    background: url('https://www.mycuisine.com/wp-content/uploads/2018/12/burger-rossini.jpg');
+    background-size: cover;
     color: #fff;
-    font-size: 1.35em;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 0.76em;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.25);
-    transform: translate(-50%, -50%) rotateX(calc(var(--i)* 36deg)) translateZ(25px);
-    background: rgba(0,0,0,0.25);
-    transform-style: preserve-3d;
+    padding: 100px;
 }
-.container .cigarette span i
-{
-    font-size: normal;
-    color: #ec9535;
+header h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
 }
-.container .cigarette span i:first-child:after
-{
-    content: 'L';
-    color: #ccc;
-    text-transform: lowercase;
+header h4{
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
 }
-.container .cigarette span i:Last-child
-{
-    color: #f00;
-    filter: blur(2px);
-    text-shadow: -4px 0 2px #000,
-    8px 0 20px #f00,
-    8px 0 24px #f00,
-    8px 0 0 #222,
-    12px 0 #555,
-    16px 0 #666,
-    20px 0 #888,
-    24px 0 #999;
+header button{
+    padding: 10px 20px;
+    background-color: #fff;
+    color:#000;
+    border:none;
+    margin-bottom: 30px;
+    outline:none;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+}
+
+.main{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .content .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:20px;
+}
+.main .content .card .left{
+   flex: 0 0 30%;
+   padding: 20px;
+   background-color:black;
+   color:#fff;
+}
+.main .content .card .right img{
+    height:300px;
+    width: 400px;
+    margin-top: 5px;
+}
+
+footer{
+    margin-top: 40px;
+    border-top: 5px solid #6f6f6f;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 30px 100px;;
+}
+footer h1{
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid white;
+    width: 20%;
+    padding-bottom: 5px;
+}
+footer .services{
+    margin-top: -10px;
+    display:flex;
+    flex-wrap:wrap;
+}
+footer .services .service{
+    margin-right: 30px;
+}
+footer .services .service p{
+    max-width: 300px;
+}
+footer #contact{
+    color: rgb(181, 181, 181);
+}
+
+@media screen and (max-width:680px){
+    nav .onglets {
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main .card {
+        margin: 10px;
+    }
+    .main .content .card .right img{
+        height:200px;
+        width: 100%;
+        margin-top: -0px;
+    }
+    .main .content .card{
+        display: block;
+    }
+    footer{
+        padding: 30px;
+    }
 }
